@@ -1,4 +1,4 @@
-<h1>Aplicativo de monitoramento de hábitos em fluter para trabalho acadêmico.</h1>
+<h1>Aplicativo de monitoramento de hábitos em flutter para trabalho acadêmico.</h1>
 
 <img src="habit-prototype.jpg">
 
