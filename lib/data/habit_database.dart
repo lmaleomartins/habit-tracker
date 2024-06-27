@@ -7,11 +7,11 @@ class HabitDatabase {
   List todaysHabitList = [];
   Map<DateTime, int> heatMapDataSet = {};
 
-  // Dados iniciais padrões
+  // Dados iniciais padrão
   void createDefaultData() {
     todaysHabitList = [
-      ["Bom dia, macho", "Aula hoje??", false],
-      ["Viajar", "Voo para Recife", false],
+      ["Ler um livro", "Ler 20 páginas de 1984", false],
+      ["Correr", "Correr 5km no parque", false],
     ];
 
     _myBox.put("START_DATE", todaysDateFormatted());
