@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:habit_tracker/theme/theme_provider.dart';
-import 'package:provider/provider.dart';
-import 'pages/home_page.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:habittrackertute/pages/home_page.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
-void main() {
-  runApp(ChangeNotifierProvider(
-    create: (context) => ThemeProvider(),
-    child: const MyApp(),
-  ));
+void main() async {
+  // Iniciar o Hive <3
+  await Hive.initFlutter();
+
+  // Abrir caixa
+  await Hive.openBox("Habit_Database");
+
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: const HomePage(),
-      theme: Provider.of<ThemeProvider>(context).themeData,
+      theme: ThemeData(primarySwatch: Colors.green),
     );
   }
 }
